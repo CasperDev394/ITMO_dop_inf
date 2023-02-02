@@ -9,3 +9,5 @@ class HomePage(BasePage):
         super().__init__(driver, self.base_url)
 
         self.login_btn = WebElements(driver, '#login-button')
+        self.user_name = WebElements(driver, '#user-name')
+        self.password = WebElements(driver, '#password')
