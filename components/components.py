@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-
+from selenium.common.exceptions import NoSuchElementException
 
 class WebElements:
     def __init__(self, driver, locator=''):
@@ -14,3 +14,10 @@ class WebElements:
 
     def send_keys(self, text: str):
         self.find_element().send_keys(text)
+
+    def exist(self):
+        try:
+            self.find_element()
+        except NoSuchElementException:
+            return False
+        return True
