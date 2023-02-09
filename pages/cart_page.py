@@ -1,4 +1,3 @@
-# https://www.saucedemo.com/cart.html
 from pages.base_page import BasePage
 from components.components import WebElements
 

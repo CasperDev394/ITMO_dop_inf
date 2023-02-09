@@ -10,3 +10,11 @@ class BasePage:
     def visit(self):
         self.driver.get(self.base_url)
 
+    def get_url(self):
+        """ Returns current browser URL. """
+        return self.driver.current_url
+
+    def equal_url(self):
+        if self.get_url() == self.base_url:
+            return True
+        return False
